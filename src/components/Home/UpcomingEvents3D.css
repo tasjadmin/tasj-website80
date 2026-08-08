@@ -1,0 +1,277 @@
+.upcoming-circle-section {
+  padding: 48px 0;
+  background-color: var(--warm-gray);
+}
+
+.circle-stage {
+  position: relative;
+  height: 400px;
+  perspective: 1200px;
+  overflow: visible;
+  border-radius: 16px;
+  background-color: var(--white);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Countdown Timer */
+.event-countdown {
+  margin-top: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: var(--white);
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.15);
+  border: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+.event-countdown strong {
+  font-size: 0.85rem;
+  color: var(--medium-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.countdown-clock {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(135deg, var(--saffron-orange), #ff8c42);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circle-wrap {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.circle-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 280px;
+  height: 350px;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  pointer-events: auto;
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.circle-card.active {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border-color: #e2e8f0;
+}
+
+.circle-card-image {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--saffron-orange), #ff8c42);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.circle-deadline-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: var(--saffron-orange);
+  color: var(--white);
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 999px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .circle-deadline-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+}
+
+.circle-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.circle-card-category {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.circle-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.circle-card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.circle-card-title {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 2px 0 4px;
+}
+
+.circle-meta-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.circle-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+}
+
+.circle-card-description {
+  color: var(--medium-gray);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.circle-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--saffron-orange);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 107, 53, 0.25);
+}
+
+.circle-nav.prev {
+  left: 12px;
+}
+
+.circle-nav.next {
+  right: 12px;
+}
+
+.circle-nav:hover {
+  background: #e55a2b;
+  box-shadow: 0 6px 12px rgba(255, 107, 53, 0.35);
+}
+
+@media (max-width: 1024px) {
+  .circle-card {
+    width: 300px;
+    height: 360px;
+  }
+
+  .circle-card-image {
+    height: 150px;
+  }
+
+  .circle-card-content {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .upcoming-circle-section {
+      padding: 24px 0;
+  }
+  
+  .circle-stage {
+    height: 420px;
+  }
+
+  .circle-card {
+    width: 80vw;
+    height: 340px;
+  }
+
+  .circle-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .circle-meta-row {
+    grid-template-columns: 1fr;
+  }
+
+  .circle-card-description {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .circle-card-actions .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+.circle-card-actions {
+  margin-top: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: flex;
+}
+
+.circle-card-actions .btn {
+  width: 100%;
+  min-width: 0;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border-width: 1px;
+  box-sizing: border-box;
+}

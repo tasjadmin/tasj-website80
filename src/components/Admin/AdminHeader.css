@@ -1,0 +1,374 @@
+.admin-header {
+  background: linear-gradient(135deg, var(--deep-navy) 0%, #1e3a8a 100%);
+  color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.admin-logo-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--saffron-orange), var(--gold));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+  flex-shrink: 0;
+}
+
+.admin-logo-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--white);
+}
+
+.admin-logo-text h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--white);
+}
+
+.admin-logo-text p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1400px) {
+  .admin-logo-text p {
+    display: none;
+  }
+}
+
+.admin-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  margin-left: 20px;
+}
+
+.nav-sections {
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.nav-sections::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 15px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav-section:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+.nav-section.active {
+  background: var(--saffron-orange);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+}
+
+.nav-label {
+  font-weight: 600;
+}
+
+@media (max-width: 1250px) {
+  .admin-logo-text h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) {
+  .nav-section {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  .logout-button {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  .nav-sections {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .admin-nav .nav-label {
+    display: none;
+  }
+  .admin-nav .nav-section, .admin-nav .logout-button {
+    padding: 10px;
+  }
+  .admin-nav .nav-icon {
+    font-size: 1.3rem;
+  }
+}
+
+.admin-user {
+  display: none;
+}
+
+.settings-nav {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.settings-nav:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.settings-nav.active {
+  background: var(--saffron-orange) !important;
+  border-color: var(--saffron-orange);
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+}
+
+.user-info {
+  display: none;
+}
+
+.user-avatar {
+  display: none;
+}
+
+.user-avatar svg {
+  display: none;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.logout-button svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu {
+  background: var(--deep-navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.mobile-nav-sections {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.mobile-nav-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+
+.mobile-nav-section:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+.mobile-nav-section.active {
+  background: var(--saffron-orange);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .admin-header-content {
+    padding: 15px;
+  }
+
+  .admin-logo {
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .admin-logo-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .admin-logo-text h1 {
+    display: block !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .admin-logo-text p {
+    display: block !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .admin-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .admin-user {
+    gap: 10px;
+  }
+
+  .settings-nav {
+    display: none;
+  }
+
+  .user-details {
+    display: none;
+  }
+
+  .logout-button span {
+    display: none;
+  }
+
+  .logout-button {
+    padding: 8px;
+    min-width: 40px;
+    width: 40px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-logo-text h1 {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+
+  .admin-logo-text p {
+    font-size: 0.75rem;
+  }
+
+  .admin-logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .admin-logo-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}

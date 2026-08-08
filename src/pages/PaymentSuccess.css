@@ -1,0 +1,284 @@
+.payment-success-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.success-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px 60px;
+}
+
+.success-content {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.success-icon svg {
+  width: 60px;
+  height: 60px;
+  color: white;
+}
+
+.success-content h1 {
+  font-size: 2.2rem;
+  color: #1A237E;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+.success-message {
+  font-size: 1.15rem;
+  color: #666;
+  margin: 0 0 40px 0;
+  line-height: 1.6;
+}
+
+.payment-details-card,
+.next-steps-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.payment-details-card h3,
+.next-steps-card h3 {
+  font-size: 1.3rem;
+  color: #1A237E;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: #333;
+  text-wrap: wrap;
+}
+
+.detail-value.amount {
+  font-size: 1.3rem;
+  color: #4caf50;
+}
+
+.detail-value.capitalize {
+  text-transform: capitalize;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.step-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #1A237E 0%, #283593 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.step-content h4 {
+  margin: 0 0 8px 0;
+  color: #1A237E;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.step-content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.success-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #1A237E;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0D1446;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3);
+}
+
+.btn-outline {
+  background: white;
+  color: #1A237E;
+  border: 2px solid #1A237E;
+}
+
+.btn-outline:hover {
+  background: #1A237E;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3);
+}
+
+.contact-info {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.contact-info p {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .success-container {
+    padding: 60px 15px 40px;
+  }
+
+  .success-content {
+    padding: 40px 25px;
+  }
+
+  .success-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .success-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .success-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .success-message {
+    font-size: 1rem;
+  }
+
+  .payment-details-card,
+  .next-steps-card {
+    padding: 25px 20px;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+
+  .success-actions .btn {
+    width: 100%;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-container {
+    padding: 50px 10px 30px;
+  }
+
+  .success-content {
+    padding: 30px 20px;
+  }
+
+  .success-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .step-item {
+    gap: 15px;
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .step-content h4 {
+    font-size: 1rem;
+  }
+
+  .step-content p {
+    font-size: 0.95rem;
+  }
+}

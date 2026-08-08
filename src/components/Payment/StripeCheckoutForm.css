@@ -1,0 +1,25 @@
+.stripe-checkout-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.stripe-checkout-form .form-group {
+  margin-bottom: 20px;
+}
+
+.stripe-checkout-form .card-element {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.stripe-checkout-form .error-message {
+  color: #d32f2f;
+  margin-top: 10px;
+}
+
+.stripe-checkout-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+}

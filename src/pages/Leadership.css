@@ -1,0 +1,5 @@
+.leadership-page {
+  min-height: 100vh;
+  background-color: var(--white);
+  overflow-x: hidden;
+}

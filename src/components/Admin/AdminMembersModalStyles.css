@@ -1,0 +1,319 @@
+/* MODAL STYLES and FORM OVERRIDES */
+
+/* Overlay - backdrop */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.75);
+    /* Darker, richer backdrop */
+    backdrop-filter: blur(8px);
+    /* Stronger blur for focus */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Modal Container */
+.modal-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    /* Wider for more breathing room */
+    border-radius: 20px;
+    /* Softer corners */
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(0, 0, 0, 0.02);
+    /* Deep shadow + border hint */
+    display: flex;
+    flex-direction: column;
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Close Button */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f1f5f9;
+    border: none;
+    font-size: 1.5rem;
+    color: #64748b;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+    transform: rotate(90deg);
+}
+
+/* Header */
+.modal-header {
+    padding: 32px 32px 24px;
+    /* More padding */
+    border-bottom: 1px solid #f1f5f9;
+    background: #ffffff;
+    border-radius: 20px 20px 0 0;
+}
+
+.modal-header h2 {
+    font-size: 1.75rem;
+    /* Larger title */
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.modal-header p {
+    color: #64748b;
+    margin: 6px 0 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Form Layout */
+.modal-form {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    /* Lots of space between sections */
+}
+
+/* Form Sections */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #334155;
+    margin: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Add a line after title */
+.form-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+/* Grids */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    /* Wider gap */
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+/* Form Fields */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 2px;
+}
+
+.form-field label .req {
+    color: #ef4444;
+}
+
+/* Inputs & Selects - The "Attractive" Part */
+.form-field input,
+.form-field select {
+    padding: 12px 16px;
+    /* Taller touch target */
+    height: 50px;
+    /* Explicit convenient height */
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    /* Smooth corners */
+    font-size: 1rem;
+    color: #0f172a;
+    background: #ffffff;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    /* Subtle depth */
+}
+
+.form-field input::placeholder {
+    color: #cbd5e1;
+}
+
+.form-field input:hover,
+.form-field select:hover {
+    border-color: #cbd5e1;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: var(--saffron-orange);
+    box-shadow:
+        0 0 0 4px rgba(255, 153, 51, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+.form-field input:disabled,
+.form-field select:disabled,
+.form-field input.disabled-input {
+    background: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+    border-color: #e2e8f0;
+    box-shadow: none;
+}
+
+/* Read-only View Mode */
+.form-field div:not([class]) {
+    padding: 14px 0;
+    font-size: 1.05rem;
+    color: #0f172a;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Error Messages */
+.field-error {
+    color: #e11d48;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* Footer Actions */
+.modal-actions {
+    margin-top: 10px;
+    padding-top: 24px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+/* Buttons */
+.btn-cancel {
+    padding: 12px 24px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #f8fafc;
+    color: #334155;
+    border-color: #cbd5e1;
+}
+
+.btn-primary-add {
+    padding: 12px 32px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    background: var(--saffron-orange);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(255, 153, 51, 0.25);
+    transition: all 0.2s;
+}
+
+.btn-primary-add:hover {
+    filter: brightness(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px -3px rgba(255, 153, 51, 0.3);
+}
+
+.btn-primary-add:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-container {
+        max-width: 100%;
+        margin: 10px;
+        max-height: calc(100vh - 20px);
+    }
+
+    .form-grid-2,
+    .form-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .modal-header {
+        padding: 24px;
+    }
+
+    .modal-form {
+        padding: 24px;
+        gap: 28px;
+    }
+}

@@ -1,0 +1,521 @@
+.gallery-page {
+  overflow-x: hidden;
+}
+
+.gallery-hero {
+  height: 70vh;
+  background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end)),
+    url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-hero .hero-content {
+  text-align: center;
+  color: var(--white);
+  z-index: 2;
+  position: relative;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.gallery-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.gallery-hero p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-content {
+  padding: 80px 0 100px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+.events-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.event-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2.event-title {
+  font-size: 1.75rem !important;
+  font-weight: 700;
+  color: var(--deep-navy);
+  margin-bottom: 24px;
+  text-align: left;
+  position: relative;
+  padding-left: 0;
+}
+
+h2.event-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--saffron-orange);
+  margin: 12px 0 0;
+  border-radius: 2px;
+}
+
+/* Google Drive Gallery Card */
+.event-gallery-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.event-gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 153, 51, 0.3);
+}
+
+.event-gallery-card:focus-visible {
+  outline: 3px solid var(--saffron-orange);
+  outline-offset: 3px;
+}
+
+/* Event Banner Image */
+.event-banner {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8edf5 0%, #d5dce8 100%);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.event-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-gallery-card:hover .event-banner img {
+  transform: scale(1.08);
+}
+
+.placeholder-banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d8e0f0 0%, #c5d0e6 100%);
+}
+
+.placeholder-banner span {
+  font-size: 3.5rem;
+  opacity: 0.4;
+  filter: grayscale(0.3);
+}
+
+.drive-icon {
+  width: 52px;
+  height: 52px;
+  margin: 24px 24px 16px;
+  flex-shrink: 0;
+}
+
+.drive-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 24px 24px;
+}
+
+.gallery-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--deep-navy);
+  margin-bottom: 10px;
+  padding: 0;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.gallery-info p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.external-link-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.event-gallery-card:hover .external-link-icon {
+  opacity: 1;
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.15) rotate(5deg);
+}
+
+.external-link-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.event-thumb {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #f5f6fa 0%, #e9ecef 100%);
+}
+
+.event-thumb.placeholder {
+  display: block;
+}
+
+.coming-soon {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.coming-soon h2 {
+  color: var(--deep-navy);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.coming-soon p {
+  color: var(--medium-gray);
+  font-size: 1.2rem;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--warm-gray);
+  border-top: 4px solid var(--saffron-orange);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .events-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .event-banner {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-gallery {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0 20px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .gallery-hero p {
+    font-size: 1.1rem;
+  }
+
+  .coming-soon h2 {
+    font-size: 2rem;
+  }
+
+  .coming-soon p {
+    font-size: 1rem;
+  }
+
+  .gallery-content {
+    padding: 40px 0;
+  }
+
+  h2.event-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px;
+  }
+
+  .event-banner {
+    height: 200px;
+  }
+
+  .event-gallery-card {
+    max-width: 100%;
+  }
+
+  .drive-icon {
+    width: 46px;
+    height: 46px;
+    margin: 20px 20px 14px;
+  }
+
+  .gallery-info {
+    padding: 0 20px 20px;
+  }
+
+  .gallery-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .gallery-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-hero {
+    height: 50vh;
+  }
+
+  .gallery-hero h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-hero p {
+    font-size: 1rem;
+  }
+
+  .events-gallery {
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .event-banner {
+    height: 180px;
+  }
+
+  .gallery-info {
+    padding: 0 16px 16px;
+  }
+
+  .gallery-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .gallery-info p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Gallery Modals */
+.gallery-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.gallery-modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  animation: slideUp 0.3s ease;
+}
+
+.gallery-selection-title {
+  font-size: 1.5rem;
+  color: var(--deep-navy);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.gallery-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.choice-card {
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+.choice-card:hover {
+  border-color: var(--saffron-orange);
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.choice-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.choice-card h3 {
+  font-size: 1.1rem;
+  color: var(--deep-navy);
+  margin-bottom: 5px;
+}
+
+.choice-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover {
+  color: #333;
+}
+
+/* Fullscreen Lightbox Override */
+.presentation-mode .gallery-modal-content {
+  background: transparent;
+  max-width: 100%;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation-mode .close-modal-btn {
+  color: white;
+  z-index: 1001;
+  top: 20px;
+  right: 20px;
+}
+
+/* React Image Gallery Overrides */
+.image-gallery-slide img {
+  max-height: 80vh !important;
+  object-fit: contain;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-choices {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Back to Events Link */
+.back-to-events {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.back-to-events:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-5px);
+  color: white;
+  text-decoration: none;
+}

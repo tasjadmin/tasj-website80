@@ -1,0 +1,78 @@
+.sponsors-page {
+  overflow-x: hidden;
+}
+
+.sponsors-hero {
+  height: 70vh;
+  background: linear-gradient(135deg, var(--navy) 0%, #2c3e50 50%, var(--navy) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsors-hero .hero-content {
+  text-align: center;
+  color: var(--white);
+  z-index: 2;
+  position: relative;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.sponsors-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, var(--white), var(--saffron-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sponsors-hero p {
+  font-size: 1.3rem;
+  color: #b8c5d1;
+  font-weight: 500;
+}
+
+.sponsors-content {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.coming-soon {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.coming-soon h2 {
+  color: var(--navy);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.coming-soon p {
+  color: var(--medium-gray);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .sponsors-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .sponsors-hero p {
+    font-size: 1.1rem;
+  }
+
+  .coming-soon h2 {
+    font-size: 2rem;
+  }
+
+  .coming-soon p {
+    font-size: 1rem;
+  }
+}

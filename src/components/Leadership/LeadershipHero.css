@@ -1,0 +1,107 @@
+.leadership-hero {
+  min-height: 60vh;
+  background-color: #1A237E;
+  background-image: linear-gradient(135deg, rgba(26, 35, 126, 0.85), rgba(255, 153, 51, 0.4)),
+    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #FFFFFF;
+  padding: 80px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.leadership-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  background: linear-gradient(45deg, var(--white), var(--saffron-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.leadership-hero h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  background: linear-gradient(45deg, var(--white), rgba(255, 255, 255, 0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.leadership-hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .leadership-hero {
+    padding: 60px 0 40px;
+    min-height: 50vh;
+    background-attachment: scroll;
+  }
+
+  .leadership-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 0;
+  }
+
+  .leadership-hero h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .leadership-hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership-hero {
+    padding: 50px 0 30px;
+    min-height: 40vh;
+  }
+
+  .leadership-hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .leadership-hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .leadership-hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+}

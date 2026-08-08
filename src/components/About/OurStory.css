@@ -1,0 +1,130 @@
+.our-story-section {
+  padding: 120px 0;
+  background-color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.our-story-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 153, 51, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  color: var(--deep-navy);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-header p {
+  color: var(--medium-gray);
+  font-size: 1.2rem;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.story-text {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.story-text p {
+  color: #4b5563;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+.story-image {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, var(--saffron-orange), #ff8c42);
+  transform: rotate(2deg);
+  transition: all 0.5s ease;
+}
+
+.story-image:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.placeholder-image {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.placeholder-image span {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.placeholder-image h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.placeholder-image p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .placeholder-image {
+    height: 300px;
+  }
+
+  .placeholder-image span {
+    font-size: 3rem;
+  }
+
+  .placeholder-image h3 {
+    font-size: 1.5rem;
+  }
+}

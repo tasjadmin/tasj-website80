@@ -1,0 +1,208 @@
+.membership-page {
+  overflow-x: hidden;
+}
+
+/* Membership Hero Styles */
+.membership-hero {
+  height: 70vh;
+  background: linear-gradient(135deg, var(--navy) 0%, #2c3e50 50%, var(--navy) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.membership-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="membership-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="3" fill="%23FF6B35" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23membership-pattern)"/></svg>') center/cover;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.membership-hero-content {
+  text-align: center;
+  color: var(--white);
+  z-index: 2;
+  position: relative;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.membership-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, var(--white), var(--saffron-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.membership-hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #b8c5d1;
+  font-weight: 500;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.scroll-chevron {
+  width: 30px;
+  height: 30px;
+  border-right: 3px solid var(--saffron-orange);
+  border-bottom: 3px solid var(--saffron-orange);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover .scroll-chevron {
+  transform: rotate(45deg) translateY(5px);
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Membership Pricing Styles */
+.membership-pricing-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricing-header h2 {
+  color: var(--navy);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.pricing-header p {
+  color: var(--medium-gray);
+  font-size: 1.2rem;
+}
+
+/* Membership Benefits Styles */
+.membership-benefits-section {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+}
+
+.benefits-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.benefits-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.benefits-header h2 {
+  color: var(--navy);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.benefits-header p {
+  color: var(--medium-gray);
+  font-size: 1.2rem;
+}
+
+/* Membership Registration Styles */
+.membership-registration-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.registration-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.registration-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.registration-header h2 {
+  color: var(--navy);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.registration-header p {
+  color: var(--medium-gray);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .membership-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .membership-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .pricing-header h2,
+  .benefits-header h2,
+  .registration-header h2 {
+    font-size: 2rem;
+  }
+
+  .pricing-header p,
+  .benefits-header p,
+  .registration-header p {
+    font-size: 1rem;
+  }
+}

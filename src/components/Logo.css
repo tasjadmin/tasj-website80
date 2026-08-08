@@ -1,0 +1,187 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.logo-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    height: 45px;
+  }
+}
+
+.logo-emblem {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.logo-outer-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--gold), #ffed4e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+.logo-text-ring {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 50%;
+  background: var(--deep-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6px;
+  font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+  line-height: 1.1;
+  padding: 2px;
+}
+
+.logo-inner-ring {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border-radius: 50%;
+  background: var(--deep-navy);
+  border: 2px solid var(--gold);
+}
+
+.logo-center {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--deep-navy);
+}
+
+.logo-lotus {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.logo-wheat {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.logo-pot {
+  font-size: 12px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-telugu {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.logo-english {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    gap: 10px;
+  }
+
+  .logo-emblem {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-text-ring {
+    font-size: 5px;
+  }
+
+  .logo-center {
+    font-size: 10px;
+  }
+
+  .logo-lotus {
+    font-size: 12px;
+  }
+
+  .logo-wheat {
+    font-size: 8px;
+  }
+
+  .logo-pot {
+    font-size: 10px;
+  }
+
+  .logo-telugu {
+    font-size: 0.8rem;
+  }
+
+  .logo-english {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    display: none;
+  }
+
+  .logo-container {
+    gap: 5px;
+  }
+}
