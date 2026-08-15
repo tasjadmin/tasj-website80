@@ -15,18 +15,18 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
   const pricingPlans = [
     {
       id: 'student',
-      name: 'Student',
+      name: 'Students',
       price: `$${settings.membership?.studentPrice || 25}`,
       period: 'per year',
       description: 'Discounted membership for students',
       features: [
-        'Access to all cultural events',
+        'Access to all cultural events at student rates',
         'Student network access',
         'Newsletter subscription',
         'Volunteer opportunities',
         'Event discounts (50%)',
         'Cultural workshop participation',
-        'Not eligible to vote in TASJ elections'
+        'Not eligible to vote in TASJ elections & decisions'
       ],
       popular: false,
       color: '#4CAF50'
@@ -95,8 +95,8 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <h2>Membership Plans</h2>
-          <p>Choose the plan that best fits your needs and join our community</p>
+          <h2>Membership Plans Available</h2>
+          <p>Choose the plan that best fits your needs and join our community -- With our Family and Friends program, you can enjoy exclusive benefits and discounts.</p>
         </motion.div>
 
         <motion.div

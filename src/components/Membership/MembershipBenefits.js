@@ -62,7 +62,7 @@ const MembershipBenefits = () => {
           transition={{ duration: 0.8 }}
         >
           <h2>Membership Benefits</h2>
-          <p>Discover all the exclusive benefits and privileges that come with TASJ membership</p>
+          <p>Discover all the exclusive benefits and privileges that come with TASJ membership Offer</p>
         </motion.div>
 
         <motion.div

@@ -25,7 +25,7 @@ const MembershipHero = () => {
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Join the TASJ Family
+          Join the TASJ Family Member
         </motion.h1>
         
         <motion.p
@@ -34,7 +34,7 @@ const MembershipHero = () => {
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Become part of our vibrant community and enjoy exclusive benefits
+          Become part of our vibrant community and enjoy exclusive benefits -- and privileges as a TASJ member.!
         </motion.p>
       </div>
       

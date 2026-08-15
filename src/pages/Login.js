@@ -148,7 +148,6 @@ const Login = () => {
                   aria-invalid={Boolean(error)}
                 aria-describedby={error ? 'login-error' : undefined}
               />
-              console.log("Email input:", formData.email);
             </div>
             <div className="login-options">
               <label className="remember-me">
@@ -204,8 +203,6 @@ const Login = () => {
                   aria-invalid={Boolean(error)}
                   aria-describedby={error ? 'login-error' : undefined}
                 />
-                console.log("Password input:", formData.password);
-
               </div>
             </div>
 

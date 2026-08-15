@@ -1,9 +1,9 @@
 import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
-console.log('Supabase URL:', supabaseUrl);
+// console.log('Supabase URL:', supabaseUrl);
 const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY
-console.log('Supabase Anon Key:', supabaseAnonKey);
+// console.log('Supabase Anon Key:', supabaseAnonKey);
 
 // Validate environment variables
 if (!supabaseUrl || !supabaseAnonKey) {
@@ -55,7 +55,6 @@ export const auth = {
       email,
       password
     });
-    console.log(error);
     return { data, error }
   },
 

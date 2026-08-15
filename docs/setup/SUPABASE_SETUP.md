@@ -160,12 +160,6 @@ await db.deleteEvent(id);
 
 For production, consider using environment variables:
 
-```bash
-# .env.local
-REACT_APP_SUPABASE_URL=https://fguygjyhvopyeztebgdb.supabase.co
-REACT_APP_SUPABASE_ANON_KEY=your-anon-key-here
-```
-
 Then update `src/lib/supabase.js` to use these variables.
 
 ---

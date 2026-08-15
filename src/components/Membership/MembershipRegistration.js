@@ -75,7 +75,7 @@ const MembershipRegistration = ({ selectedPlan }) => {
     "California": ["Los Angeles", "San Francisco", "San Jose", "San Diego", "Sunnyvale", "Fremont"],
     "Illinois": ["Chicago", "Naperville", "Aurora", "Schaumburg"],
     "Virginia": ["Ashburn", "Richmond", "Arlington", "Fairfax"],
-    "Maryland": ["Baltimore", "Rockville", "Gaithersburg", "Columbia"]
+    "Maryland": ["Baltimore", "Rockville", "Gaithersburg", "Columbia","Silver Spring"],
   };
 
   useEffect(() => {
@@ -119,8 +119,8 @@ const MembershipRegistration = ({ selectedPlan }) => {
   }, [selectedPlan]);
 
   const steps = [
-    { number: 1, title: "Personal Details", completed: currentStep > 1 },
-    { number: 2, title: "Membership Details", completed: currentStep > 2 },
+    { number: 1, title: "Personal Details of Member", completed: currentStep > 1 },
+    { number: 2, title: "Membership Details Form", completed: currentStep > 2 },
     { number: 3, title: "Review & Submit", completed: false },
   ];
 
