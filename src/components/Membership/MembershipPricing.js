@@ -15,7 +15,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
   const pricingPlans = [
     {
       id: 'student',
-      name: 'Students',
+      name: 'Student',
       price: `$${settings.membership?.studentPrice || 25}`,
       period: 'per year',
       description: 'Discounted membership for students',
@@ -26,7 +26,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
         'Volunteer opportunities',
         'Event discounts (50%)',
         'Cultural workshop participation',
-        'Not eligible to vote in TASJ elections & decisions'
+        'Not eligible to vote in TASJ elections'
       ],
       popular: false,
       color: '#4CAF50'
@@ -95,7 +95,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <h2>Membership Plans Available Now</h2>
+          <h2>Membership Plans</h2>
           <p>Choose the plan that best fits your needs and join our community</p>
         </motion.div>
 
