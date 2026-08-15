@@ -95,8 +95,8 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <h2>Membership Plans Available</h2>
-          <p>Choose the plan that best fits your needs and join our community -- With our Family and Friends program, you can enjoy exclusive benefits and discounts.</p>
+          <h2>Membership Plans Available Now</h2>
+          <p>Choose the plan that best fits your needs and join our community</p>
         </motion.div>
 
         <motion.div
