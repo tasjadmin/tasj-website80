@@ -20,7 +20,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
       period: 'per year',
       description: 'Discounted membership for students',
       features: [
-        'Access to all cultural events at student rates',
+        'Access to all cultural events',
         'Student network access',
         'Newsletter subscription',
         'Volunteer opportunities',
