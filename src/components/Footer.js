@@ -166,6 +166,7 @@ const Footer = () => {
             <div className="footer-bottom-links">
               <Link to="/privacy" className="footer-bottom-link">Privacy Policy</Link>
               <Link to="/terms" className="footer-bottom-link">Terms of Service</Link>
+              <a href="/documents/tasj-bylaws.pdf" target="_blank" rel="noopener noreferrer" className="footer-bottom-link">Bylaws</a>
             </div>
           </div>
         </div>
