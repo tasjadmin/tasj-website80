@@ -16,7 +16,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
     {
       id: 'student',
       name: 'Student',
-      price: `$${settings.membership?.studentPrice || 25}`,
+      price: `$${settings.membership?.studentPrice || 15}`,
       period: 'per year',
       description: 'Discounted membership for students',
       features: [
@@ -34,7 +34,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
     {
       id: 'yearly',
       name: 'Yearly Membership',
-      price: `$${settings.membership?.yearlyPrice || 100}`,
+      price: `$${settings.membership?.yearlyPrice || 35}`,
       period: 'per year',
       description: 'Standard annual membership for individuals',
       features: [
@@ -42,8 +42,8 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
         'Member directory access',
         'Newsletter subscription',
         'Community forum access',
-        'Event discounts (10%)',
-        'Voting rights'
+        'Event discounts for a year',
+        'Not eligible to vote in TASJ elections'
       ],
       popular: true,
       color: '#FF6B35'
@@ -51,17 +51,17 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
     {
       id: 'lifetime',
       name: 'Lifetime Membership',
-      price: `$${settings.membership?.lifetimePrice || 500}`,
+      price: `$${settings.membership?.lifetimePrice || 100}`,
       period: 'one-time',
       description: 'Lifetime commitment to TASJ benefits',
       features: [
         'Everything in Yearly plan',
         'Lifetime membership status',
-        'VIP event access',
         'Board meeting observer rights',
-        'Event discounts (25%)',
+        'Event discounts',
         'Recognition in annual report',
         'Priority for leadership roles'
+        'Lifetime voting rights'
       ],
       popular: false,
       color: '#FFD700'
@@ -69,7 +69,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
     {
       id: 'life_donor',
       name: 'Life Donor Membership',
-      price: `$${settings.membership?.lifeDonorPrice || 1000}`,
+      price: `$${settings.membership?.lifeDonorPrice || 5000}`,
       period: 'one-time',
       description: 'Premium lifetime patronage & recognition',
       features: [
