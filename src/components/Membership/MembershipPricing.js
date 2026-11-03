@@ -16,7 +16,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
     {
       id: 'student',
       name: 'Student',
-      price: `$${settings.membership?.studentPrice || 15}`,
+      price: `$${settings.membership?.studentPrice || 115}`,
       period: 'per year',
       description: 'Discounted membership for students',
       features: [
@@ -34,7 +34,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
     {
       id: 'yearly',
       name: 'Yearly Membership',
-      price: `$${settings.membership?.yearlyPrice || 35}`,
+      price: `$${settings.membership?.yearlyPrice || 315}`,
       period: 'per year',
       description: 'Standard annual membership for individuals',
       features: [
