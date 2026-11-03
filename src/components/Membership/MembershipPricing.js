@@ -60,7 +60,7 @@ const MembershipPricing = ({ onChoosePlan, selectedPlan }) => {
         'Board meeting observer rights',
         'Event discounts',
         'Recognition in annual report',
-        'Priority for leadership roles'
+        'Priority for leadership roles',
         'Lifetime voting rights'
       ],
       popular: false,
